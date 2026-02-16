@@ -7,9 +7,9 @@ assignees: ''
 
 ---
 
-**As a [role],**
-**I want [an action or feature],**
-**So that [a reason or benefit].**
+**Som en [role],**
+**Will jeg [an action or feature],**
+**Så jeg kan [a reason or benefit].**
 
 **Acceptance Criteria:**
 - [ ] Criteria 1: Describe the first acceptance criterion here.
