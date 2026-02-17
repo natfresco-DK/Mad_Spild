@@ -56,13 +56,220 @@
     height: 40px;
 }
 
-
 body{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding-top: 70px;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
 }
+
+/* Hero-sektionen */
+.Hero-background{
+    background-color: #e8ece6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    max-width: 90%;
+    margin: 20px auto;
+    border-radius: 5em;
+}
+.Hero-button{
+    display: inline-block;
+    background-color: #5f7766;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-top: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+}
+/* Main sektion */
+.main-background{
+    background-color: #e8ece6;
+    padding: 40px 60px;
+    max-width: 90%;
+    margin: 20px auto;
+    border-radius: 5em;
+}
+
+/* Cards sektionen */
+.cards-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cards-background{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+card{
+    flex: 0 1 300px;       /* stabil bredde (max-ish) */
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+card:hover{
+    transform: translateY(-5px);
+}
+.card-img-1,
+.card-img-2,
+.card-img-3{
+    width: 70px;
+    height: 70px;
+    background: #e8ece6;
+    padding: 10px;
+    border-radius: 50%;
+}
+card h2{
+    margin: 10px 0 15px;
+}
+card p{
+    color: #6b746e;
+    line-height: 1.6;
+
+}
+.card-lykkeposer{ /* Boksen 56e0c6 */
+    background: #2F4F3E;
+    padding: 80px 30px;
+    margin: 40px 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+}
+.card-lykkeposer-oversigt{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.lykkeposer-container{
+    width: 100%;
+    max-width: 1400px;      /* gør sektionen bredere */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* Kort oversigt til venstre */
+.card-lykkeposer-kort{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.lykkepose-kort{
+    width: 100%;
+    max-width: 600px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* top3-cirle */
+.top3-circle{
+    width: 420px;
+    height: 420px;
+    border-radius: 20%;
+    background: #b8b6b4;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.top3-circle h2{
+    margin: 0;
+    font-size: 22px;
+}
+.top3-circle p{
+    margin: 4px 0;
+}
+.distance{
+    background: rgba(0,0,0,0.08);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b3f3c;
+}
+#lykkepose-seflere a{
+    display: block;
+    margin: 14px auto 0;
+    width: 240px;
+    text-align: center;
+    background: #5f7766;
+    color: #fff;
+    padding: 14px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.lykkepose-img{
+    display: flex;
+    justify-content: left;
+    width: 100px;
+    height: 100px;
+}
+.place-logo{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+}
+.place-text strong{
+    display: block;
+    font-size: 14px;
+    line-height: 1.1;
+}
+.place-text span{
+    display: block;
+    font-size: 12px;
+    color: #6b746e;
+    margin-top: 2px;
+}
+.top3-sub{
+    margin: 0;
+    font-size: 14px;
+}
+.top3-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+.top3-item{
+    background: rgba(255,255,255,0.85);
+    border-radius: 12px;
+    padding: 12px 12px;
+    display: grid;
+    grid-template-columns: 26px 44px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+.rank{
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: rgba(47,79,62,0.18);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+
+
+
 
 .footer{
     background-color: #e8ece6;
@@ -77,52 +284,6 @@ body{
     align-self: flex-start;
     height: 60px;
 }
-
-
-.Hero-background{
-    background-color: #e8ece6;
-    height: 40vh;
-    display: inline-flex;
-}
-
-.card-img-1{
-    width: 100%;
-    height: 100%;
-
-}
-
-.lykkepose-kort{
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin-top: 20px;
-}
-
-.lykkepose-afstand{
-    display: flex;
-    justify-content: right;
-    align-self: center;
-    margin-top: 20px;
-}
-
-.lykkepose-img{
-    display: flex;
-    justify-content: left;
-    width: 100px;
-    height: 100px;
-}
-
-#lykkepose-seflere{
-    color: red;
-}
-
-.lykkeposer-categories{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-}
-
 
 
 
