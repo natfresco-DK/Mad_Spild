@@ -56,21 +56,32 @@
     height: 40px;
 }
 
-body{
-    padding: 0px;
-    margin: 0px;
-}
 
-.body{
-    margin: 0;
-    padding: 0;
+body{
+    margin: 0px;
+    padding: 0px;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
 }
 
-.Hero-background{
+.footer{
     background-color: #e8ece6;
     height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    padding: 50px;
+    align-self: flex-start;
+    height: 60px;
+}
+
+
+.Hero-background{
+    background-color: #e8ece6;
+    height: 40vh;
     display: inline-flex;
 }
 
@@ -86,4 +97,24 @@ body{
     align-self: center;
     margin-top: 20px;
 }
-.
+
+.lykkepose-afstand{
+    display: flex;
+    justify-content: right;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.lykkepose-img{
+    display: flex;
+    justify-content: left;
+    width: 100px;
+    height: 100px;
+}
+
+#lykkepose-seflere{
+    color: red;
+}
+
+
+
