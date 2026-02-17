@@ -106,7 +106,7 @@ body{
     flex-wrap: wrap;
 }
 card{
-    flex: 0 1 300px;       /* stabil bredde (max-ish) */
+    flex: 0 1 300px;
     background: #ffffff;
     padding: 30px 25px;
     border-radius: 14px;
@@ -134,8 +134,8 @@ card p{
     line-height: 1.6;
 
 }
-.card-lykkeposer{ /* Boksen 56e0c6 */
-    background: #2F4F3E;
+.card-lykkeposer{ /* Boksen (kort + top3) */
+    background: linear-gradient(135deg, #2F4F3E, #3F5E54);
     padding: 80px 30px;
     margin: 40px 20px;
     border-radius: 16px;
@@ -149,7 +149,7 @@ card p{
 }
 .lykkeposer-container{
     width: 100%;
-    max-width: 1400px;      /* gør sektionen bredere */
+    max-width: 1400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -270,12 +270,11 @@ card p{
 
 
 
-
 .footer{
     background-color: #e8ece6;
     height: 20vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
