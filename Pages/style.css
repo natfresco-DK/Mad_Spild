@@ -1,26 +1,71 @@
-.nav{
-    display: flex;
-    justify-content: space-evenly;
-    overflow: hidden;
-    background-color: #0d7504;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    color: white;
-    height: 40px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.nav a {
-    float: left;
+.nav {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav .logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #f2f2f2;
+}
+
+.container {
+    padding: 20px 40px;
+}
+
+form label {
     display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.mitid {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.nav a:hover {
-    background: #ddd;
-    color: black;
+    padding: 15px 0;
+    margin-top: 40px;
 }

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Virksomheder der mindsker madspild</title>
+    <style>
+        /* --- Generelle styles --- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .nav {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav .logo {
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        /* --- Hero sektion --- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 40px;
+            background-color: #e6f4ea;
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+        }
+
+        .search-filter {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .search-filter input,
+        .search-filter select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* --- Container --- */
+        .container {
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* --- Virksomhedskort --- */
+        .company-card {
+            display: flex;
+            gap: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            align-items: flex-start;
+        }
+
+        .company-card img.company-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .company-info h2 {
+            margin: 0 0 10px 0;
+        }
+
+        .company-info p {
+            margin: 5px 0;
+        }
+
+        .company-info .links a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .company-info button {
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .company-info button:hover {
+            background-color: #45a049;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 700px) {
+            .company-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .company-info {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+    <img class="logo" src="../pictures/Logo.png" alt="Madspild Logo">
+    <div class="nav-links">
+        <a href="index.html">Forside</a>
+        <a href="#">Forbrugere</a>
+        <a href="#">Virksomheder</a>
+        <a href="#">Information</a>
+    </div>
+</nav>
+
+<!-- Hero-sektion -->
+<section class="hero">
+    <h1>Virksomheder der mindsker madspild</h1>
+    <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Søg virksomhed...">
+        <select id="categoryFilter">
+            <option value="">Kategori ▼</option>
+            <option value="Detail">Detail</option>
+            <option value="Restaurant">Restaurant</option>
+            <option value="Producent">Producent</option>
+        </select>
+    </div>
+</section>
+
+<!-- Virksomhedsliste -->
+<main class="container company-list">
+
+    <!-- Virksomhed A -->
+    <div class="company-card" data-category="Restaurant">
+        <img class="company-logo" src="../pictures/company1.png" alt="Virksomhedslogo">
+        <div class="company-info">
+            <h2>Virksomhed A</h2>
+            <p class="description">Kort beskrivelse af virksomhedens indsats mod madspild.</p>
+            <p class="slogan"><strong>Slogan:</strong> “Stop madspild – begynd hos os!”</p>
+            <p class="links"><strong>Links:</strong> <a href="https://virksomhedA.dk">Hjemmeside</a>, <a href="#">Facebook</a></p>
+            <p class="email"><strong>Email:</strong> kontakt@virksomhedA.dk</p>
+            <button onclick="alert('Se profil for Virksomhed A')">Se profil</button>
+        </div>
+    </div>
+
+
+    <div class="company-card" data-category="Detail">
+        <img class="company-logo" src="../pictures/company2.png" alt="Virksomhedslogo">
+        <div class="company-info">
+            <h2>Virksomhed B</h2>
+            <p class="description">Kort beskrivelse af virksomhedens indsats mod madspild.</p>
+            <p class="slogan"><strong>Slogan:</strong> “Mad til alle – ingen spild.”</p>
+            <p class="links"><strong>Links:</strong> <a href="https://virksomhedB.dk">Hjemmeside</a>, <a href="#">Instagram</a></p>
+            <p class="email"><strong>Email:</strong> kontakt@virksomhedB.dk</p>
+            <button onclick="alert('Se profil for Virksomhed B')">Se profil</button>
+        </div>
+    </div>
+
+</main>
+
+
+<footer class="footer">
+    <p>Velkommen til Danmark mod madspild</p>
+</footer>
+
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const companyCards = document.querySelectorAll('.company-card');
+
+    function filterCompanies() {
+        const searchValue = searchInput.value.toLowerCase();
+        const categoryValue = categoryFilter.value;
+
+        companyCards.forEach(card => {
+            const name = card.querySelector('h2').textContent.toLowerCase();
+            const description = card.querySelector('.description').textContent.toLowerCase();
+            const category = card.getAttribute('data-category');
+
+            if (
+                (name.includes(searchValue) || description.includes(searchValue)) &&
+                (categoryValue === "" || category === categoryValue)
+            ) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    searchInput.addEventListener('input', filterCompanies);
+    categoryFilter.addEventListener('change', filterCompanies);
+</script>
+
+</body>
+</html>
