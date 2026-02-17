@@ -105,3 +105,11 @@ main.background{
     object-fit: contain;
     margin-bottom: 15px;
 }
+
+.callToAction{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 87%;
+    padding: 0;
+}
