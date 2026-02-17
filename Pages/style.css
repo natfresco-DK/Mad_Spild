@@ -1,19 +1,27 @@
+.navigation{
+    display: flex;
+    flex-direction: row;
+}
+
 .nav{
     display: flex;
-    justify-content: space-evenly;
-    overflow: hidden;
-    background-color: #0d7504;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: visible;
+    background-color: #e8ece6;
     position: fixed;
     top: 0;
     width: 100%;
     color: white;
-    height: 40px;
+    height: 45px;
+
 }
 
 .nav a {
     float: left;
     display: block;
-    color: white;
+    color: grey;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -21,6 +29,34 @@
 }
 
 .nav a:hover {
-    background: #ddd;
     color: black;
+}
+
+#left{
+    display: flex;
+    align-items: flex-start;
+    width: 33%;
+}
+
+#right{
+    display: flex;
+    width: 33%;
+
+}
+
+#center{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.logo{
+    padding: 50px;
+    align-self: flex-start;
+    height: 40px;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
 }
