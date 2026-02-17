@@ -34,29 +34,71 @@
 
 <main class="main-background">
     <div class="cards-container">
-        <cards class="cards-background">
-            <card class="card-1">
-                <img class="card-img-1" src="../pictures/Carrot.png" alt="Gulerod ikon">
-                <h2>Reducer madspild</h2>
-                <p>Få indsigt i hvordan du kan reducere madspild i din hverdag med enkelte tips og tricks.</p>
-                <a href="index.html">Læs mere ></a>
-            </card>
+        <div class="cards-carousel" data-carousel>
+            <button class="carousel-btn prev" type="button" aria-label="Forrige" data-prev>‹</button>
 
-            <card class="card-2">
-                <img class="card-img-2" src="../pictures/lykkepose-31.jpg" alt="Lykkepose ikon">
-                <h2>Find lykkeposer</h2>
-                <p>Køb lykkeposer med overskudsmad fra lokale butikker og restauranter, og gør en forskel.</p>
-                <a href="index.html">Læs mere ></a>
-            </card>
+            <div class="carousel-track" data-track>
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-1" src="../pictures/Carrot.png" alt="Gulerod ikon">
+                        <h2>Reducer madspild</h2>
+                        <p>Få indsigt i hvordan du kan reducere madspild i din hverdag med enkelte tips og tricks.</p>
+                        <a href="index.html">Læs mere ></a>
+                    </div>
+                </div>
 
-            <card class="card-3">
-                <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
-                <h2>Deltag i events</h2>
-                <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
-                <a href="index.html">Læs mere ></a>
-            </card>
-        </cards>
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-2" src="../pictures/lykkepose-31.jpg" alt="Lykkepose ikon">
+                        <h2>Find lykkeposer</h2>
+                        <p>Køb lykkeposer med overskudsmad fra lokale butikker og restauranter, og gør en forskel.</p>
+                        <a href="index.html">Læs mere ></a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
+                        <h2>Deltag i events</h2>
+                        <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
+                        <a href="index.html">Læs mere ></a>
+                    </div>
+                </div>
+
+
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
+                        <h2>Deltag i events</h2>
+                        <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
+                        <a href="index.html">Læs mere ></a>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
+                        <h2>Deltag i events</h2>
+                        <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
+                        <a href="index.html">Læs mere ></a>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Næste" data-next>›</button>
+
+            <div class="carousel-dots" data-dots aria-label="Vælg slide"></div>
+        </div>
     </div>
+
+
+
+
 
     <section class="card-lykkeposer">
         <div class="lykkeposer-container">
@@ -125,5 +167,98 @@
     <p>Copyright © 2026 Madspild</p>
 
 </footer>
+
+
+<script>
+    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const track = carousel.querySelector('[data-track]');
+        const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+        const prevBtn = carousel.querySelector('[data-prev]');
+        const nextBtn = carousel.querySelector('[data-next]');
+        const dotsWrap = carousel.querySelector('[data-dots]');
+
+        /* Map til at lave dots pr. card der findes */
+        const dots = slides.map((_, i) => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'carousel-dot';
+            b.setAttribute('aria-label', `Slide ${i + 1}`);
+            b.addEventListener('click', () => {
+                slides[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            });
+            dotsWrap.appendChild(b);
+            return b;
+        });
+
+        function updateUI() {
+            const slideCenters = slides.map(s => s.offsetLeft + s.offsetWidth / 2);
+            const viewportCenter = track.scrollLeft + track.clientWidth / 2;
+            let active = 0;
+            let best = Infinity;
+            slideCenters.forEach((c, i) => {
+                const d = Math.abs(c - viewportCenter);
+                if (d < best) { best = d; active = i; }
+            });
+            dots.forEach((d, i) => d.classList.toggle('is-active', i === active));
+            const atStart = track.scrollLeft <= 2;
+            const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+            prevBtn.disabled = atStart;
+            nextBtn.disabled = atEnd;
+        }
+
+        /* Metode til at scroll et card frem/tilbage */
+        function scrollByOne(direction) {
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            const gap = parseFloat(getComputedStyle(track).gap) || 0;
+            track.scrollBy({ left: direction * (slideWidth + gap), behavior: 'smooth' });
+        }
+
+        /* Forskellige event listeners*/
+        prevBtn.addEventListener('click', () => scrollByOne(-1));
+        nextBtn.addEventListener('click', () => scrollByOne(1));
+        track.addEventListener('scroll', () => requestAnimationFrame(updateUI));
+        window.addEventListener('resize', updateUI);
+
+        updateUI();
+    });
+
+        document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const track = carousel.querySelector('[data-track]');
+        const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+
+        let index = 0;
+        const intervalMs = 5000; /* 5 sekunder */
+
+        function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        slides[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+
+        let timer = setInterval(() => goTo(index + 1), intervalMs);
+
+        carousel.addEventListener('mouseenter', () => clearInterval(timer));
+        carousel.addEventListener('mouseleave', () => {
+        timer = setInterval(() => goTo(index + 1), intervalMs);
+    });
+
+        /* Opdatere index, hvis benytter sig af scroll funktionen. */
+        track.addEventListener('scroll', () => {
+        const viewportCenter = track.scrollLeft + track.clientWidth / 2;
+        let best = Infinity, active = 0;
+
+        slides.forEach((s, i) => {
+        const c = s.offsetLeft + s.offsetWidth / 2;
+        const d = Math.abs(c - viewportCenter);
+        if (d < best) { best = d; active = i; }
+    });
+        index = active;
+    });
+    });
+</script>
+
+
+
+
+
 </body>
 </html>
