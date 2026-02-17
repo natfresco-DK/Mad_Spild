@@ -1,7 +1,11 @@
 ---
 name: User Story
 about: A template for a user story with accept criteria and DOD
-title: ''
+title: '<head>
+    <meta charset="UTF-8">
+    <title> Skab Overblik Over Jeres Madspild!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>'
 labels: ''
 assignees: ''
 
