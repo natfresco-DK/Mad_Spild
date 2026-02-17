@@ -1,26 +1,97 @@
-.nav{
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f8f4;
+}
+
+
+.nav {
     display: flex;
-    justify-content: space-evenly;
-    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
     background-color: #0d7504;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    color: white;
+    padding: 10px 40px;
+}
+
+.logo {
     height: 40px;
 }
 
-.nav a {
-    float: left;
-    display: block;
+.nav-links a {
     color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    margin-left: 20px;
+    font-weight: 500;
 }
 
-.nav a:hover {
-    background: #ddd;
-    color: black;
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b8d59b;
+    padding: 80px 60px;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-left p {
+    font-size: 18px;
+}
+
+
+.hero-right {
+    width: 40%;
+}
+
+.outer-box {
+    background-color: #a8a8a8;
+    padding: 30px;
+}
+
+.inner-box {
+    background-color: #c7e3b0;
+    padding: 30px;
+}
+
+.inner-box p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+    background-color: white;
+}
+
+.feature {
+    width: 25%;
+    text-align: center;
+}
+
+.icon {
+    background-color: #b8d59b;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
 }
