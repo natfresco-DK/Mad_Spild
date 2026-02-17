@@ -1,0 +1,26 @@
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    background-color: #0d7504;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    height: 40px;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav a:hover {
+    background: #ddd;
+    color: black;
+}
