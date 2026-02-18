@@ -1,9 +1,9 @@
-.navigation {
+.navigation{
     display: flex;
     flex-direction: row;
 }
 
-.nav {
+.nav{
     display: flex;
     align-content: center;
     align-items: center;
@@ -15,9 +15,8 @@
     width: 100%;
     color: white;
     height: 45px;
-
+    z-index: 100;
 }
-
 .nav a {
     float: left;
     display: block;
@@ -27,30 +26,32 @@
     text-decoration: none;
     font-size: 17px;
 }
-
 .nav a:hover {
     color: black;
 }
-
-#left {
+#left{
     display: flex;
     align-items: flex-start;
     width: 33%;
 }
-
-#right {
+#right{
     display: flex;
     width: 33%;
-
 }
-
-#center {
+#center{
     display: flex;
     flex: 1;
     justify-content: space-evenly;
 }
 
-.logo {
+.index-hero-img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.logo{
     padding: 50px;
     align-self: flex-start;
     height: 40px;
@@ -68,6 +69,7 @@ body {
     width: 98%;
     margin: 15px;
     min-height: 50vh;
+    border-radius: 5em;
 }
 
 .background p{
@@ -113,4 +115,443 @@ main.background{
     align-items: center;
     width: 87%;
     padding: 0;
+}
+
+body{
+    margin: 0;
+    padding-top: 70px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Hero-sektionen */
+.Hero-background{
+    background-color: #e8ece6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    max-width: 90%;
+    margin: 20px auto;
+    border-radius: 5em;
+}
+.Hero-button{
+    display: inline-block;
+    background-color: #5f7766;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-top: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+}
+/* Main sektion */
+.main-background{
+    background-color: #e8ece6;
+    padding: 40px 60px;
+    max-width: 90%;
+    margin: 20px auto;
+    border-radius: 5em;
+}
+
+/* Cards sektionen */
+.cards-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cards-background{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+card{
+    flex: 0 1 300px;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+card:hover{
+    transform: translateY(-5px);
+}
+.card-img-1, .card-img-2, .card-img-3{
+    width: 70px;
+    height: 70px;
+    background: #e8ece6;
+    padding: 10px;
+    border-radius: 50%;
+}
+card h2{
+    margin: 10px 0 15px;
+}
+card p{
+    color: #6b746e;
+    line-height: 1.6;
+
+}
+.card-lykkeposer{ /* Boksen (kort + top3) */
+    background: linear-gradient(135deg, #2F4F3E, #3F5E54);
+    padding: 80px 30px;
+    margin: 40px 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+}
+.card-lykkeposer-oversigt{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.lykkeposer-container{
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* Kort oversigt til venstre */
+.card-lykkeposer-kort{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.lykkepose-kort{
+    width: 100%;
+    max-width: 600px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* top3-cirle */
+.top3-circle{
+    width: 420px;
+    height: 420px;
+    border-radius: 20%;
+    background: #b8b6b4;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.top3-circle h2{
+    margin: 0;
+    font-size: 22px;
+}
+.top3-circle p{
+    margin: 4px 0;
+}
+.distance{
+    background: rgba(0,0,0,0.08);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #3b3f3c;
+}
+.lykkepose-seflere a, .lykkepose-seflere p, .lykkepose-seflere input{
+    display: block;
+    margin: 14px auto 0;
+    width: 240px;
+    text-align: center;
+    background: #5f7766;
+    color: #fff;
+    padding: 14px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+
+
+.lykkepose-img{
+    display: flex;
+    justify-content: left;
+    width: 100px;
+    height: 100px;
+}
+.place-logo{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+}
+.place-text strong{
+    display: block;
+    font-size: 14px;
+    line-height: 1.1;
+}
+.place-text span{
+    display: block;
+    font-size: 12px;
+    color: #6b746e;
+    margin-top: 2px;
+}
+.top3-sub{
+    margin: 0;
+    font-size: 14px;
+}
+.top3-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+.top3-item{
+    background: rgba(255,255,255,0.85);
+    border-radius: 12px;
+    padding: 12px 12px;
+    display: grid;
+    grid-template-columns: 26px 44px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+.rank{
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: rgba(47,79,62,0.18);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+
+
+/* Footer */
+
+.footer{
+    background-color: #e8ece6;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-logo {
+    padding: 50px;
+    align-self: flex-start;
+    height: 60px;
+}
+
+
+
+/* Carousel wrapper */
+.cards-carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px 40px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track::-webkit-scrollbar { height: 10px; }
+.carousel-track::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 999px; }
+
+.carousel-slide {
+    scroll-snap-align: center;
+    flex: 0 0 calc((100% - 100px) / 3);
+    min-width: 260px;
+}
+
+@media (max-width: 980px) {
+    .carousel-slide { flex-basis: calc((100% - 50px) / 2); }
+}
+
+@media (max-width: 600px) {
+    .carousel-slide { flex-basis: 100%; }
+    .carousel-track { padding: 10px 10px; }
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: 0;
+    background: #5f7766;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    z-index: 5;
+}
+
+.carousel-btn.prev { left: 6px; }
+.carousel-btn.next { right: 6px; }
+
+.carousel-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.carousel-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    border: 0;
+    background: rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+.carousel-dot.is-active {
+    background: #5f7766;
+}
+
+.info-card{
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+.info-card:hover{
+    transform: translateY(-5px);
+}
+
+
+
+/* Lykkeposer-kategori sektionen */
+.lykkeposer-categories{
+    display: flex;
+    gap: 14px;
+
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto 8px;
+
+    padding: 10px 6px 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-color: #5f7766 #d7dcd4;
+    scrollbar-width: thin;
+}
+
+.lykkeposer-categories::-webkit-scrollbar{
+    height: 10px;
+}
+
+.lykkeposer-categories::-webkit-scrollbar-track{
+    background: #d7dcd4;
+    border-radius: 999px;
+}
+
+.lykkeposer-categories::-webkit-scrollbar-thumb{
+    background: #5f7766;
+    border-radius: 999px;
+}
+
+.lykkeposer-categories::-webkit-scrollbar-thumb:hover{
+    background: #4e6657;
+}
+
+.categories{
+    flex: 0 0 160px;
+    scroll-snap-align: start;
+
+    background: #b8b6b4;
+    color: #1f1f1f;
+    border: none;
+    padding: 10px 0;
+    border-radius: 999px;
+
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.categories.active{
+    background: #5f7766;
+    color: #fff;
+}
+
+
+.categories-wrap{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories-wrap::before,
+.categories-wrap::after{
+    content:"";
+    position:absolute;
+    top:0; bottom:0;
+    width:40px;
+    pointer-events:none;
+}
+
+.categories-wrap::before{
+    left:0;
+    background: linear-gradient(90deg, #eef1ea 0%, rgba(238,241,234,0) 100%);
+}
+
+.categories-wrap::after{
+    right:0;
+    background: linear-gradient(270deg, #eef1ea 0%, rgba(238,241,234,0) 100%);
+}
+
+
+/* Lykkeposer.html */
+.lykkepose-top-søgte{
+    display: inline-flex;
+    margin: 14px auto 0;
+    height: 50vh;
+    background-color: #bbbbbb;
+    justify-content: left;
+}
+
+.lykkepose-top3{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 14px;
+}
+
+.lykkepose-left-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 14px;
 }
