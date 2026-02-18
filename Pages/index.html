@@ -231,7 +231,7 @@
         const slides = Array.from(track.querySelectorAll('.carousel-slide'));
 
         let index = 0;
-        const intervalMs = 500000; /* 5 sekunder */
+        const intervalMs = 5000; /* (1000xSekunder) 5 sekunder */
 
         function goTo(i) {
         index = (i + slides.length) % slides.length;
