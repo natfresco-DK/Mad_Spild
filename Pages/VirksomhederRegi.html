@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Danmark mod madspild - Registrer Virksomhed</title>
@@ -20,12 +20,11 @@
 
 <!-- Hero-sektion -->
 <section class="hero">
-    <div class="hero-box">
-        <h1>Bliv en del af Danmark mod madspild</h1>
-        <p>Vis kunder at jeres virksomhed reducerer madspild.</p>
-    </div>
-    <div class="hero-picture">
-        <!-- indsæt et billede senere -->
+    <div class="hero-tekst">
+        <div>
+            <h1>Bliv en del af Danmark mod madspild</h1>
+            <p>Vis kunder at jeres virksomhed reducerer madspild.</p>
+        </div>
     </div>
 </section>
 
@@ -51,7 +50,6 @@
         <label for="description">Beskrivelse af indsats:</label>
         <textarea id="description" name="description" rows="4" placeholder="Beskriv jeres tiltag"></textarea>
 
-        <!-- Ny sektion for slogan og links -->
         <label for="slogan">Slogan:</label>
         <input type="text" id="slogan" name="slogan" placeholder="Indtast jeres slogan">
 
@@ -62,13 +60,12 @@
         <input type="file" id="logo" name="logo">
 
         <label>
-            <input type="checkbox" name="pledge">  Vi arbejder aktivt med at mindske madspild
+            <input type="checkbox" id="pledge" name="pledge"> Vi arbejder aktivt med at mindske madspild
         </label>
 
-        <!-- MitID autorisation -->
         <fieldset class="mitid">
             <legend>MitID autorisation</legend>
-            <p>Bekræft  virksomheds identitet via MitID.</p>
+            <p>Bekræft virksomhedens identitet via MitID.</p>
             <button type="button" onclick="alert('MitID autorisation placeholder')">Login med MitID</button>
         </fieldset>
 
@@ -76,7 +73,6 @@
 
     </form>
 </main>
-
 
 <footer class="footer">
     <p>&copy; 2026 Mindste Madspild</p>
