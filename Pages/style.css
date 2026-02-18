@@ -199,7 +199,7 @@ card p{
     font-weight: 600;
     color: #3b3f3c;
 }
-.lykkepose-seflere a{
+.lykkepose-seflere a, .lykkepose-seflere p, .lykkepose-seflere input{
     display: block;
     margin: 14px auto 0;
     width: 240px;
@@ -211,6 +211,7 @@ card p{
     text-decoration: none;
     font-weight: 700;
 }
+
 
 
 
@@ -472,7 +473,25 @@ card p{
 
 /* Lykkeposer.html */
 .lykkepose-top-søgte{
-    display: block;
-
+    display: inline-flex;
+    margin: 14px auto 0;
+    height: 50vh;
+    background-color: #bbbbbb;
+    justify-content: left;
 }
 
+.lykkepose-top3{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 14px;
+}
+
+.lykkepose-left-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 14px;
+}

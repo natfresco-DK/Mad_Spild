@@ -105,12 +105,8 @@
     </div>
 
 
-
-
-
     <section class="card-lykkeposer">
         <div class="lykkeposer-container">
-
             <section class="card-lykkeposer-oversigt">
                 <div class="top3-circle">
                     <h2>Top 3 lykkeposer</h2>
@@ -235,7 +231,7 @@
         const slides = Array.from(track.querySelectorAll('.carousel-slide'));
 
         let index = 0;
-        const intervalMs = 5000; /* 5 sekunder */
+        const intervalMs = 500000; /* 5 sekunder */
 
         function goTo(i) {
         index = (i + slides.length) % slides.length;
