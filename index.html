@@ -29,7 +29,7 @@
 
         <p class="Hero-button">Tilmeld dig her</p>
     </Hero-box>
-    <img src="../pictures/Hero-img.png" alt="Madspild Hero">
+    <img class ="index-hero-img" src="../pictures/Hero-img.png" alt="Madspild Hero">
 </hero>
 
 <main class="main-background">
@@ -43,7 +43,9 @@
                         <img class="card-img-1" src="../pictures/Carrot.png" alt="Gulerod ikon">
                         <h2>Reducer madspild</h2>
                         <p>Få indsigt i hvordan du kan reducere madspild i din hverdag med enkelte tips og tricks.</p>
-                        <a href="index.html">Læs mere ></a>
+                        <div class="lykkepose-seflere">
+                            <a href="lykkeposer.html">Læs mere</a>
+                        </div>
                     </div>
                 </div>
 
@@ -52,7 +54,10 @@
                         <img class="card-img-2" src="../pictures/lykkepose-31.jpg" alt="Lykkepose ikon">
                         <h2>Find lykkeposer</h2>
                         <p>Køb lykkeposer med overskudsmad fra lokale butikker og restauranter, og gør en forskel.</p>
-                        <a href="index.html">Læs mere ></a>
+                        <div class="lykkepose-seflere">
+                            <a href="lykkeposer.html">Læs mere</a>
+                        </div>
+
                     </div>
                 </div>
 
@@ -61,7 +66,9 @@
                         <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
                         <h2>Deltag i events</h2>
                         <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
-                        <a href="index.html">Læs mere ></a>
+                        <div class="lykkepose-seflere">
+                            <a href="lykkeposer.html">Læs mere</a>
+                        </div>
                     </div>
                 </div>
 
@@ -71,18 +78,19 @@
                         <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
                         <h2>Deltag i events</h2>
                         <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
-                        <a href="index.html">Læs mere ></a>
+                        <div class="lykkepose-seflere">
+                            <a href="lykkeposer.html">Læs mere</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="carousel-slide">
-                    <div class="info-card">
-                        <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
-                        <h2>Deltag i events</h2>
-                        <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
-                        <a href="index.html">Læs mere ></a>
-                    </div>
-                </div>
+
+
+
+
+
+
+
 
 
 
@@ -97,12 +105,8 @@
     </div>
 
 
-
-
-
     <section class="card-lykkeposer">
         <div class="lykkeposer-container">
-
             <section class="card-lykkeposer-oversigt">
                 <div class="top3-circle">
                     <h2>Top 3 lykkeposer</h2>
@@ -140,7 +144,7 @@
                         </div>
                     </div>
 
-                    <div id="lykkepose-seflere">
+                    <div class="lykkepose-seflere">
                         <a href="lykkeposer.html">Se flere</a>
                     </div>
                 </div>
@@ -227,7 +231,7 @@
         const slides = Array.from(track.querySelectorAll('.carousel-slide'));
 
         let index = 0;
-        const intervalMs = 5000; /* 5 sekunder */
+        const intervalMs = 500000; /* 5 sekunder */
 
         function goTo(i) {
         index = (i + slides.length) % slides.length;
