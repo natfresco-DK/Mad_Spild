@@ -10,17 +10,41 @@
 <body>
 <nav class="nav">
     <div id="left">
-        <img src="../pictures/Logo.png" alt="Madspild Logo" class="logo">
+        <a href="../index.html">
+            <img src="../pictures/Logo.png" alt="Madspild Logo" class="logo">
+        </a>
     </div>
     <div id="center">
-        <a href="index.html">Forside</a>
-        <a href="">Forbrugere</a>
-        <a href="">Virksomheder</a>
-        <a href="">Information</a>
+        <div class="nav-item">
+            <a href="../index.html">Forside</a>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Forbrugere</a>
+            <div class="dropdown-menu">
+                <a href="lykkeposer.html">Lykkeposer</a>
+                <a href="#">Information om madspild</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Virksomheder</a>
+            <div class="dropdown-menu">
+                <a href="overskudsvarer.html">Overskudsvarer</a>
+                <a href="#">Information om madspild</a>
+                <a href="#">Hvem arbejder på at bekæmpe madspild?</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Information</a>
+            <div class="dropdown-menu">
+                <a href="#">Madspild</a>
+                <a href="#">Hvad er en lykkepose?</a>
+            </div>
+        </div>
     </div>
     <div id="right"></div>
 
 </nav>
+
 
 <hero class="Hero-background">
     <Hero-box class ="Hero-box">
