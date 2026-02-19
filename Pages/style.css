@@ -677,6 +677,20 @@ form label {
     font-weight: bold;
 }
 
+/* Inline label for checkboxes so the box and text stay on the same line */
+.inline-label {
+    display: inline-flex; /* keeps checkbox and text on one line */
+    align-items: center;
+    gap: 8px; /* small space between checkbox and text */
+    font-weight: normal; /* match the rest of the form text */
+    margin-top: 12px; /* similar spacing to other labels */
+}
+
+.inline-label input[type="checkbox"] {
+    width: auto; /* prevent global width:100% from expanding the checkbox */
+    margin: 0; /* reset default margin */
+}
+
 form input,
 form textarea,
 form button {
