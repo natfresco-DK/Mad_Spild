@@ -9,24 +9,50 @@
 
 <!-- Navigation -->
 <nav class="nav">
-    <img class="logo" src="../pictures/Logo.png" alt="Madspild Logo">
-    <div class="nav-links">
-        <a href="index.html">Forside</a>
-        <a href="#">Forbrugere</a>
-        <a href="#">Virksomheder</a>
-        <a href="#">Information</a>
+    <div id="left">
+        <a href="../index.html">
+            <img src="../pictures/Logo.png" alt="Madspild Logo" class="logo">
+        </a>
     </div>
+    <div id="center">
+        <div class="nav-item">
+            <a href="../index.html">Forside</a>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Forbrugere</a>
+            <div class="dropdown-menu">
+                <a href="lykkeposer.html">Lykkeposer</a>
+                <a href="seMadspild.html">Information om madspild</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Virksomheder</a>
+            <div class="dropdown-menu">
+                <a href="overskudsvarer.html">Overskudsvarer</a>
+                <a href="seMadspild.html">Information om madspild</a>
+                <a href="#">Hvem arbejder på at bekæmpe madspild?</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Information</a>
+            <div class="dropdown-menu">
+                <a href="seMadspild.html">Madspild</a>
+                <a href="#">Hvad er en lykkepose?</a>
+            </div>
+        </div>
+    </div>
+    <div id="right"></div>
 </nav>
 
 <!-- Hero-sektion -->
-<section class="hero">
+<Hero class="hero background">
     <div class="hero-tekst">
         <div>
             <h1>Virksomheder der mindsker madspild</h1>
             <p>Søg blandt de virksomheder, der reducerer madspild.</p>
         </div>
     </div>
-</section>
+</Hero>
 
 <!-- Virksomhedsliste -->
 <main class="container company-list">
@@ -58,7 +84,37 @@
 </main>
 
 <footer class="footer">
-    <p>Velkommen til Danmark mod madspild</p>
+    <div class="footer-top">
+        <div class="footer-container">
+            <div class="footer-logo-section">
+                <a href="../index.html">
+                    <img class="footer-logo" src="../pictures/Logo.png" alt="Madspild Logo">
+                </a>
+                <p>Danmark mod madspild</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Forbrugere</h4>
+                    <a href="lykkeposer.html">Lykkeposer</a>
+                    <a href="seMadspild.html">Information om madspild</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Virksomheder</h4>
+                    <a href="overskudsvarer.html">Overskudsvarer</a>
+                    <a href="seMadspild.html">Information om madspild</a>
+                    <a href="#">Hvem arbejder på at bekæmpe madspild?</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Information</h4>
+                    <a href="seMadspild.html">Madspild</a>
+                    <a href="#">Hvad er en lykkepose?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright © 2026 Madspild</p>
+    </div>
 </footer>
 
 
