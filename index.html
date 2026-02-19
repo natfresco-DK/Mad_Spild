@@ -260,8 +260,6 @@
         const slides = Array.from(track.querySelectorAll('.carousel-slide'));
 
         let index = 0;
-        const intervalMs = 60000; /* (1000xSekunder) 60 sekunder */
-
         function goTo(i) {
         index = (i + slides.length) % slides.length;
         slides[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
@@ -288,10 +286,6 @@
     });
     });
 </script>
-
-
-
-
 
 </body>
 </html>
