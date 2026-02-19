@@ -8,13 +8,36 @@
 <body>
 <nav class="nav">
     <div id="left">
-    <img src="pictures/Logo.png" alt="Madspild Logo" class="logo">
+        <a href="index.html">
+            <img src="pictures/Logo.png" alt="Madspild Logo" class="logo">
+        </a>
     </div>
     <div id="center">
-        <a href="index.html">Forside</a>
-        <a href="">Forbrugere</a>
-        <a href="">Virksomheder</a>
-        <a href="">Information</a>
+        <div class="nav-item">
+            <a href="index.html">Forside</a>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Forbrugere</a>
+            <div class="dropdown-menu">
+                <a href="Pages/lykkeposer.html">Lykkeposer</a>
+                <a href="#">Information om madspild</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Virksomheder</a>
+            <div class="dropdown-menu">
+                <a href="Pages/overskudsvarer.html">Overskudsvarer</a>
+                <a href="#">Information om madspild</a>
+                <a href="#">Hvem arbejder på at bekæmpe madspild?</a>
+            </div>
+        </div>
+        <div class="nav-item dropdown">
+            <a href="#">Information</a>
+            <div class="dropdown-menu">
+                <a href="#">Madspild</a>
+                <a href="#">Hvad er en lykkepose?</a>
+            </div>
+        </div>
     </div>
     <div id="right"></div>
 
@@ -83,23 +106,8 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
-
             <button class="carousel-btn next" type="button" aria-label="Næste" data-next>›</button>
-
             <div class="carousel-dots" data-dots aria-label="Vælg slide"></div>
         </div>
     </div>
@@ -145,7 +153,7 @@
                     </div>
 
                     <div class="lykkepose-seflere">
-                        <a href="lykkeposer.html">Se flere</a>
+                        <a href="Pages/lykkeposer.html">Se flere</a>
                     </div>
                 </div>
             </section>
@@ -159,10 +167,40 @@
 </main>
 
 <footer class="footer">
-    <img src="../pictures/Logo.png" alt="Madspild Logo" class="footer-logo">
-    <p>Copyright © 2026 Madspild</p>
-
+    <div class="footer-top">
+        <div class="footer-container">
+            <div class="footer-logo-section">
+                <a href="index.html">
+                    <img class="footer-logo" src="pictures/Logo.png" alt="Madspild Logo" >
+                </a>
+                <p>Danmark mod madspild</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Forbrugere</h4>
+                    <a href="Pages/lykkeposer.html">Lykkeposer</a>
+                    <a href="#">Information om madspild</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Virksomheder</h4>
+                    <a href="Pages/overskudsvarer.html">Overskudsvarer</a>
+                    <a href="#">Information om madspild</a>
+                    <a href="#">Hvem arbejder på at bekæmpe madspild?</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Information</h4>
+                    <a href="#">Madspild</a>
+                    <a href="#">Hvad er en lykkepose?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright © 2026 Madspild</p>
+    </div>
 </footer>
+
+
 
 <script>
     document.querySelectorAll('[data-carousel]').forEach(carousel => {
@@ -222,8 +260,6 @@
         const slides = Array.from(track.querySelectorAll('.carousel-slide'));
 
         let index = 0;
-        const intervalMs = 500000; /* 5 sekunder */
-
         function goTo(i) {
         index = (i + slides.length) % slides.length;
         slides[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
