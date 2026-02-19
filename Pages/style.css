@@ -231,6 +231,7 @@ card p{
     padding: 80px 30px;
     margin: 40px 20px;
     border-radius: 16px;
+    height: 28em;
     display: flex;
     justify-content: center;
 }
@@ -276,6 +277,7 @@ card p{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: -60px;
 }
 .top3-circle h2{
     margin: 0;
@@ -351,7 +353,6 @@ card p{
     grid-template-columns: 26px 44px 1fr auto;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 .rank{
     width: 22px;
@@ -520,19 +521,17 @@ card p{
 /* Lykkeposer-kategori sektionen */
 .lykkeposer-categories{
     display: flex;
+    justify-content: center;
+    align-content: center;
     gap: 14px;
-
     width: 100%;
     max-width: 650px;
     margin: 20px auto 8px;
-
     padding: 10px 6px 14px;
-
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-
     scrollbar-color: #5f7766 #d7dcd4;
     scrollbar-width: thin;
 }
@@ -560,12 +559,11 @@ card p{
     scroll-snap-align: start;
 
     background: #b8b6b4;
-    color: #1f1f1f;
-    border: none;
+    border: 0;
     padding: 10px 0;
     border-radius: 999px;
 
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
     text-align: center;
 }
@@ -578,7 +576,7 @@ card p{
 
 .categories-wrap{
     position: relative;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
