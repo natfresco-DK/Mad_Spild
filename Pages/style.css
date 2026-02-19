@@ -422,6 +422,13 @@ card p{
     color: #555;
 }
 
+.footer-img{
+    width: 20%;
+    max-width: 40px;
+    height: auto;
+    object-fit: cover;
+}
+
 
 /* Carousel wrapper */
 .cards-carousel {
