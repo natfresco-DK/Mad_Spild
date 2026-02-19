@@ -444,7 +444,9 @@ card p{
     transform: translateY(-5px);
 }
 
-
+.info-card ul{
+    text-align: left;
+}
 
 /* Lykkeposer-kategori sektionen */
 .lykkeposer-categories{

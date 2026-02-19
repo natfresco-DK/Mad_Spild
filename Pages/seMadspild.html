@@ -21,7 +21,7 @@
 </nav>
 <br>
 <br>
-<Hero class="background">
+<Hero class="Hero-background">
     <header class="header">
         <h1> Skab overbliv over jeres Madspild</h1>
         <p>Identificer spild kilder og mål reduktion.</p>
@@ -29,79 +29,207 @@
     <img src="../pictures/Overblik_madspild.jpg" alt="to good to go" class="image">
 </Hero>
 <main class="background">
-    <header class="header">
-        <h2>Hvordan håndtere du dine overskuds varer?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nulla sollicitudin tincidunt quam, facilisis viverra felis sollicitudin at.
-            Quisque arcu justo, laoreet quis odio id, eleifend tempus neque. Pellentesque
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-            Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-            In elementum elit at neque fermentum maximus.
-            Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-            Proin sed nulla magna. Nam sed tincidunt erat.
-            Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-            In elementum elit at neque fermentum maximus.
-            Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-            Proin sed nulla magna. Nam sed tincidunt erat. Nulla sollicitudin tincidunt quam, facilisis viverra felis sollicitudin at.
-            Quisque arcu justo, laoreet quis odio id, eleifend tempus neque. Pellentesque
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-            Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-            In elementum elit at neque fermentum maximus.
-            Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-            Proin sed nulla magna. Nam sed tincidunt erat.
-        </p>
-    </header>
-    <img src="../pictures/overskudsmad1.jpg" alt="Overskudsmad 1" class="image">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nulla sollicitudin tincidunt quam, facilisis viverra felis sollicitudin at.
-        Quisque arcu justo, laoreet quis odio id, eleifend tempus neque. Pellentesque
-        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-        In elementum elit at neque fermentum maximus.
-        Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-        Proin sed nulla magna. Nam sed tincidunt erat.
-        Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-        In elementum elit at neque fermentum maximus.
-        Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-        Proin sed nulla magna. Nam sed tincidunt erat. Nulla sollicitudin tincidunt quam, facilisis viverra felis sollicitudin at.
-        Quisque arcu justo, laoreet quis odio id, eleifend tempus neque. Pellentesque
-        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-        In elementum elit at neque fermentum maximus.
-        Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-        Proin sed nulla magna. Nam sed tincidunt erat.
-    </p>
-    <img src="../pictures/Foodwaste4.png" alt="Overskudsmad 1" class="longImage">
+    <div class="cards-container">
+        <div class="cards-carousel" data-carousel>
+            <button class="carousel-btn prev" type="button" aria-label="Forrige" data-prev>‹</button>
 
-    <img src="../pictures/overskudsmad2.jpg" alt="Overskudsmad 1" class="image">
+            <div class="carousel-track" data-track>
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-1" src="../pictures/SeMadspild1.svg" alt="Gulerod ikon">
+                        <h2>Udvikling i madspild</h2>
+                        <p>Formålet med platformen er at</p>
+                        <ul>
+                            <li>Skabe overblik</li>
+                            <li>Understøtte datadrevet beslutningstagning</li>
+                            <li>Muliggøre strategisk reduktion</li>
+                            <li>Dokumentere udvikling over tid</li>
+                        </ul>
+                        <button class="Hero-button" type="button" onclick="alert('Her linker vi til en artikel')">Se mere her ></button>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-2" src="../pictures/statistics-bars-infographic-free-png.webp"
+                             alt="Lykkepose ikon">
+                        <h2>Udviklingsproces</h2>
+                        <p>Vores model</p>
+                        <ul>
+                            <li>Kontinuerlig forbedringsmodel</li>
+                            <li>Registrér spild</li>
+                            <li>Analysér årsager</li>
+                            <li>Implementér løsning</li>
+                            <li>Mål effekt og justér strategi</li>
+                        </ul>
+                        <button class="Hero-button" type="button" onclick="alert('Her linker vi til en artikel')">Se
+                            mere her >
+                        </button>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
+                        <h2>Deltag i events</h2>
+                        <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
+                        <button class="Hero-button" type="button" onclick="alert('Her linker vi til et event')">Tilmeld dig her ></button>
+
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="info-card">
+                        <img class="card-img-3" src="../pictures/calendar-icon-vector.jpg" alt="Kalender ikon">
+                        <h2>Deltag i events</h2>
+                        <p>Tilmeld dig workshops og events, hvor vi forklarer hvordan du kan reducere madspild</p>
+                        <button class="Hero-button" type="button" onclick="alert('Her linker vi til et event')">Tilmeld her ></button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Næste" data-next>›</button>
+
+            <div class="carousel-dots" data-dots aria-label="Vælg slide"></div>
+        </div>
+    </div>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        A blanditiis illum labore non veniam. Ad aliquam aliquid
+        aperiam culpa eos. Bla bla bla.</p>
+    <img class="image" src="../pictures/statistics-bars-infographic-free-png.webp" alt="Overskudsmad 1">
     <header class="header">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nulla sollicitudin tincidunt quam, facilisis viverra felis sollicitudin at.
-            Quisque arcu justo, laoreet quis odio id, eleifend tempus neque. Pellentesque
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-            Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-            In elementum elit at neque fermentum maximus.
-            Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-            Proin sed nulla magna. Nam sed tincidunt erat.
-            Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-            In elementum elit at neque fermentum maximus.
-            Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-            Proin sed nulla magna. Nam sed tincidunt erat. Nulla sollicitudin tincidunt quam, facilisis viverra felis sollicitudin at.
-            Quisque arcu justo, laoreet quis odio id, eleifend tempus neque. Pellentesque
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-            Integer dolor lorem, pretium nec elementum sed, bibendum nec odio.
-            In elementum elit at neque fermentum maximus.
-            Nulla libero lectus, euismod at lobortis vel, malesuada sed tellus.
-            Proin sed nulla magna. Nam sed tincidunt erat.
-        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aut cumque dolorem eaque enim ipsam iste reprehenderit, sequi suscipit vitae!
+            Consectetur molestiae nulla odio tenetur.
+            Illo minima non nulla praesentium provident.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aut cumque dolorem eaque enim ipsam iste reprehenderit, sequi suscipit vitae!
+            Consectetur molestiae nulla odio tenetur.
+            Illo minima non nulla praesentium provident.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aut cumque dolorem eaque enim ipsam iste reprehenderit, sequi suscipit vitae!
+            Consectetur molestiae nulla odio tenetur.
+            Illo minima non nulla praesentium provident.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aut cumque dolorem eaque enim ipsam iste reprehenderit, sequi suscipit vitae!
+            Consectetur molestiae nulla odio tenetur.
+            Illo minima non nulla praesentium provident.</p>
     </header>
-    <header class="callToAction">
-        <h1> Vil du lærer mere om hvad du kan gøre med dine overskuds varer?</h1>
-        <button type="button" onclick="alert('Her linker vi til et event')">Klik her!</button>
-    </header>
+    <p>Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit.
+        Architecto consequuntur,
+        doloremque doloribus exercitationem facilis hic id inventore libero maxime minima molestiae,
+        nostrum odit omnis pariatur perferendis placeat veniam!
+        Consequatur delectus dolores ducimus et illo itaque minus molestiae obcaecati,
+        omnis placeat provident, quibusdam quis reiciendis sunt vitae.
+        Deserunt eveniet hic ipsa possimus tenetur unde velit, voluptas?
+        Cumque cupiditate distinctio eaque explicabo maxime numquam officia possimus quidem,
+        similique, totam veniam vero voluptatem?
+        Beatae, blanditiis eum id magnam necessitatibus quo ratione.
+        Aut cum, dolore esse fugit illo in odio pariatur quisquam.
+        Repellat, sint voluptatem?
+        A, accusamus deleniti ducimus eos minus quasi quidem suscipit.</p>
+
 </main>
-<footer>
+<footer class="footer">
+    <img src="../pictures/Logo.png" alt="Madspild Logo" class="footer-logo">
+    <p>Copyright © 2026 Madspild</p>
 
 </footer>
+
+<script>
+    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const track = carousel.querySelector('[data-track]');
+        const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+        const prevBtn = carousel.querySelector('[data-prev]');
+        const nextBtn = carousel.querySelector('[data-next]');
+        const dotsWrap = carousel.querySelector('[data-dots]');
+
+        /* Map til at lave dots pr. card der findes */
+        const dots = slides.map((_, i) => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'carousel-dot';
+            b.setAttribute('aria-label', `Slide ${i + 1}`);
+            b.addEventListener('click', () => {
+                slides[i].scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'});
+            });
+            dotsWrap.appendChild(b);
+            return b;
+        });
+
+        function updateUI() {
+            const slideCenters = slides.map(s => s.offsetLeft + s.offsetWidth / 2);
+            const viewportCenter = track.scrollLeft + track.clientWidth / 2;
+            let active = 0;
+            let best = Infinity;
+            slideCenters.forEach((c, i) => {
+                const d = Math.abs(c - viewportCenter);
+                if (d < best) {
+                    best = d;
+                    active = i;
+                }
+            });
+            dots.forEach((d, i) => d.classList.toggle('is-active', i === active));
+            const atStart = track.scrollLeft <= 2;
+            const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+            prevBtn.disabled = atStart;
+            nextBtn.disabled = atEnd;
+        }
+
+        /* Metode til at scroll et card frem/tilbage */
+        function scrollByOne(direction) {
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            const gap = parseFloat(getComputedStyle(track).gap) || 0;
+            track.scrollBy({left: direction * (slideWidth + gap), behavior: 'smooth'});
+        }
+
+        /* Forskellige event listeners*/
+        prevBtn.addEventListener('click', () => scrollByOne(-1));
+        nextBtn.addEventListener('click', () => scrollByOne(1));
+        track.addEventListener('scroll', () => requestAnimationFrame(updateUI));
+        window.addEventListener('resize', updateUI);
+
+        updateUI();
+    });
+
+    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const track = carousel.querySelector('[data-track]');
+        const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+
+        let index = 0;
+        const intervalMs = 5000; /* 5 sekunder */
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            slides[index].scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'});
+        }
+
+        let timer = setInterval(() => goTo(index + 1), intervalMs);
+
+        carousel.addEventListener('mouseenter', () => clearInterval(timer));
+        carousel.addEventListener('mouseleave', () => {
+            timer = setInterval(() => goTo(index + 1), intervalMs);
+        });
+
+        /* Opdatere index, hvis benytter sig af scroll funktionen. */
+        track.addEventListener('scroll', () => {
+            const viewportCenter = track.scrollLeft + track.clientWidth / 2;
+            let best = Infinity, active = 0;
+
+            slides.forEach((s, i) => {
+                const c = s.offsetLeft + s.offsetWidth / 2;
+                const d = Math.abs(c - viewportCenter);
+                if (d < best) {
+                    best = d;
+                    active = i;
+                }
+            });
+            index = active;
+        });
+    });
+</script>
+
 </body>
 </html>
