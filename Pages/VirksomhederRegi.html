@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danmark mod madspild - Registrer Virksomhed</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+    <img class="logo" src="../pictures/Logo.png" alt="Madspild Logo">
+    <div class="nav-links">
+        <a href="index.html">Forside</a>
+        <a href="#">Forbrugere</a>
+        <a href="#">Virksomheder</a>
+        <a href="#">Information</a>
+    </div>
+</nav>
+
+<!-- Hero-sektion -->
+<section class="hero">
+    <div class="hero-tekst">
+        <div>
+            <h1>Bliv en del af Danmark mod madspild</h1>
+            <p>Vis kunder at jeres virksomhed reducerer madspild.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Registreringsformular -->
+<main class="container">
+    <form>
+
+        <label for="company">Virksomhedsnavn:</label>
+        <input type="text" id="company" name="company" placeholder="Indtast virksomhedsnavn">
+
+        <label for="cvr">CVR nummer:</label>
+        <input type="text" id="cvr" name="cvr" placeholder="Indtast CVR nummer">
+
+        <label for="contact">Kontaktperson:</label>
+        <input type="text" id="contact" name="contact" placeholder="Indtast kontaktperson">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Indtast email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Vælg password">
+
+        <label for="description">Beskrivelse af indsats:</label>
+        <textarea id="description" name="description" rows="4" placeholder="Beskriv jeres tiltag"></textarea>
+
+        <label for="slogan">Slogan:</label>
+        <input type="text" id="slogan" name="slogan" placeholder="Indtast jeres slogan">
+
+        <label for="links">Relevante links:</label>
+        <textarea id="links" name="links" rows="2" placeholder="Indsæt relevante links, f.eks. hjemmeside eller sociale medier"></textarea>
+
+        <label for="logo">Upload logo:</label>
+        <input type="file" id="logo" name="logo">
+
+        <label>
+            <input type="checkbox" id="pledge" name="pledge"> Vi arbejder aktivt med at mindske madspild
+        </label>
+
+        <fieldset class="mitid">
+            <legend>MitID autorisation</legend>
+            <p>Bekræft virksomhedens identitet via MitID.</p>
+            <button type="button" onclick="alert('MitID autorisation placeholder')">Login med MitID</button>
+        </fieldset>
+
+        <button type="submit">Registrer virksomhed</button>
+
+    </form>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 Mindste Madspild</p>
+</footer>
+
+</body>
+</html>
